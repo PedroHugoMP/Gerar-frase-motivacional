@@ -1,0 +1,98 @@
+body{
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 31%, rgba(189,181,219,1) 56%, rgba(148,187,233,1) 78%);
+display: flex;
+flex-direction: column;
+justify-content: center;
+justify-items: center;
+align-items: center;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h1{
+  margin: 12px;
+    border: 0px solid black;
+    border-radius: 11px 11px 11px 11px;
+-webkit-border-radius: 11px 11px 11px 11px;
+-moz-border-radius: 11px 11px 11px 11px;
+background-color: #31313331;
+font-style: oblique;
+padding: 10px;
+}
+h2{
+    border: 0px solid black;
+    border-radius: 11px 11px 11px 11px;
+-webkit-border-radius: 11px 11px 11px 11px;
+-moz-border-radius: 11px 11px 11px 11px;
+background-color: #31313331;
+padding: 10px;
+}
+
+.wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button {
+    min-width: 300px;
+    min-height: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: #c64fd1;
+  background: linear-gradient(90deg, #c64fd1 0%, #c64fd1 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px #c64fd1;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    }
+  
+  button::before {
+  content: '';
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #c64fd1c5;
+    box-shadow: 0 0 60px #c64fd1c5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+  }
+  
+  .button:hover, .button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+  }
+  
+  button:hover::before, button:focus::before {
+    opacity: 1;
+  }
+  
+  button::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #c64fd1c5;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+  
+  button:hover::after, button:focus::after {
+    animation: none;
+    display: none;
+  }
